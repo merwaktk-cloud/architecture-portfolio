@@ -1,5 +1,6 @@
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -74,10 +75,10 @@
   /* Allows both sections to grow and shrink */
   margin-left: auto;
   width: fit-content;
-  padding: 60px;
+  padding: 10px;
   margin-right: 60px;
   /* Space between the form and info sections */
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
   /* Separator line */
 
 }
@@ -140,3 +141,138 @@ button:hover {
   /* Shadow: Horizontal, Vertical, Blur, Spread, Color */
   box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.3);
 }
+
+
+  /* 1. Center the section and titles */
+#portfolio {
+  text-align: center;
+  padding: 40px 10px;
+}
+
+#portfolio h1, #portfolio h2 {
+  margin-bottom: 10px; /* Moves text closer to images */
+  margin-top: 40px;    /* Adds space ABOVE the title for the next project */
+}
+
+/* 2. Configure the Grid for 2 columns & Center it */
+.projectimg {
+  display: grid;
+  /* Specifically creates 2 columns */
+  grid-template-columns: repeat(2, minmax(200px, 450px)); 
+  gap: 20px; 
+  justify-content: center; /* Centers the whole grid */
+  margin-bottom: 40px; 
+}
+
+/* 3. Fix the Image Spacing */
+.projectimg img {
+  width: 100%;
+  height: 250px;       /* Increased height slightly for better scale */
+  margin: 0;           /* REMOVED the 80px margin that was causing the gap */
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 
+    0 15px 30px rgba(0,0,0,0.3),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
+}
+
+.projectimg img:hover {
+  transform: scale(1.03);
+}
+
+/* 4. Responsive: 1 column on mobile phones */
+@media (max-width: 600px) {
+  .projectimg {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 100px;
+    /* logo chhota on phone */
+  }
+
+  .navlinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navlinks a {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  /* HERO TEXT */
+  .hero {
+    padding: 0 20px;
+    min-height: auto;
+  }
+
+  .simple-hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  /* SERVICES SECTION */
+  .services {
+    padding-right: 20%;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .servicescontent {
+    border-left: 2px solid white;
+    padding-left: 15px;
+  }
+
+  /* ABOUT SECTION */
+  .about {
+    text-align: left;
+    display: block;
+    padding-right: 0 !important;
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  /* CONTACT */
+  .contact {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 30px 20px;
+    border-right: none;
+  }
+
+  /* ROW LINE */
+  .row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .line {
+    display: none;
+    /* vertical line phone pe bekaar lagti */
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+
