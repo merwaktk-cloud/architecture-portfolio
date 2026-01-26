@@ -111,7 +111,7 @@
   margin-right: 60px;
   /* Space between the form and info sections */
   border-left: 1px solid #eee;
-  /* Separator line */
+    border-bottom: 1px solid white;
 
 }
 
@@ -122,7 +122,6 @@ footer {
   margin-top: 10px;
   text-align: center;
   color: white;
-
 }
 
 
